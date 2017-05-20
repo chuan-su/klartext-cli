@@ -1,5 +1,17 @@
 # Klartext::Cli
 
+## Install ##
+
+Assume `ruby` is installed in your system, otherwise install lastest `ruby` by running `brew install ruby` for `mac os`
+
+Install `bundler`
+    
+    $ gem install bundler
+    
+Install rquired dependencies
+
+    $ bundle install
+
 ## Usage ##
 
 View all rake tasks
