@@ -1,11 +1,11 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'klartext/cli/version'
+require 'klartext/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "klartext-cli"
-  spec.version       = Klartext::Cli::VERSION
+  spec.version       = Klartext::VERSION
   spec.authors       = ["Chuan"]
   spec.email         = ["chuansu@icloud.com"]
 
@@ -30,12 +30,14 @@ Gem::Specification.new do |spec|
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
 
+  spec.add_dependency 'mysql2'
+  spec.add_dependency "activerecord"
+  spec.add_dependency 'standalone_migrations'
+  spec.add_dependency 'elasticsearch'
+  
   spec.add_development_dependency "bundler", "~> 1.13"
   spec.add_development_dependency "rake", "~> 10.0"
   spec.add_development_dependency "rspec", "~> 3.0"
   spec.add_development_dependency "pry"
-  spec.add_development_dependency 'mysql2'
-  spec.add_development_dependency "activerecord"
-  spec.add_development_dependency 'standalone_migrations'
-  spec.add_development_dependency 'elasticsearch'
+
 end
