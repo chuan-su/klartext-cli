@@ -1,6 +1,9 @@
 ;; This buffer is for text that is not saved, and for Lisp evaluation.
 ;; To create a file, visit it with <open> and enter text in its buffer.
 
+## GET
+GET http://localhost:8080/search/words?query=lagt
+
 ## Post user
 POST http://localhost:8080/users
 Content-Type: application/json
